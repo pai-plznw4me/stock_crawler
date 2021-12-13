@@ -3,16 +3,16 @@ import urllib.request
 import datetime
 
 
-def get_stock_price(stock_code):
+def get_stock_price(ticker_code):
     """
     Description:
 
-    :param stock_code: str
+    :param ticker_code: str, 종목 코드
     example)
         삼성전자, 006500
         LG전자, 066570
     """
-    f = urllib.request.urlopen("https://finance.naver.com/item/sise.naver?code={}".format(stock_code))
+    f = urllib.request.urlopen("https://finance.naver.com/item/sise.naver?code={}".format(ticker_code))
     s = f.read()
     f.close()
 
