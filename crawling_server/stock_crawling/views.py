@@ -1,7 +1,6 @@
-from django.conf import settings
 import datetime
 
 
 def send_hello():
-    print('hello world')
-
+    time = datetime.datetime.now()
+    print('hello world:[{}]'.format(time))
